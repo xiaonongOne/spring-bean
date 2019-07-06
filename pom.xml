@@ -14,24 +14,35 @@
         <junitversion>4.9</junitversion>  
   </properties> 
   <dependencies>
-    <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>${junitversion}</version>
-            <scope>test</scope>
-        </dependency>
     
-        <!-- spring核心包 -->  
+	    <!-- spring核心包 -->  
         <dependency>  
             <groupId>org.springframework</groupId>  
             <artifactId>spring-core</artifactId>  
             <version>${springversion}</version>  
         </dependency>
+        <!-- spring测试 -->  
+        <dependency>
+ 			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>${springversion}</version>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+		</dependency>
         <dependency>  
             <groupId>org.springframework</groupId>  
             <artifactId>spring-web</artifactId>  
             <version>${springversion}</version>  
         </dependency>  
+        <!-- https://mvnrepository.com/artifact/javax.inject/javax.inject -->
+		<dependency>
+		    <groupId>javax.inject</groupId>
+		    <artifactId>javax.inject</artifactId>
+		    <version>1</version>
+		</dependency>
         
   </dependencies>
   <build>

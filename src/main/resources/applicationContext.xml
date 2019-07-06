@@ -1,20 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-
-    <bean name="dumplings" class="com.pojo.Dumplings">
-        <property name="pie" value="芹菜猪肉馅水饺"/>
-        <property name="size" value="超大份"/>
-    </bean>
-    <bean name="juice" class="com.pojo.Juice">
-        <property name="name" value="苹果汁"/>
-    </bean>
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       					   http://www.springframework.org/schema/beans/spring-beans.xsd 
+       					   http://www.springframework.org/schema/context 
+       					   http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+       					   
+    <bean id="complexAssembly" class="com.xml.service.ComplexAssembly">
+    <!-- 装配Long类型的id -->
+    <property name="id" value="1"/>
     
-    <bean name="hotel" class="com.pojo.Hotel">
-        <property name="dumplings" ref="dumplings"/>
-        <property name="juice" ref="juice"/>
-    </bean>
+    <!-- 装配List类型的list -->
+    <property name="list">
+        <list>
+            <value>value-list-1</value>
+            <value>value-list-2</value>
+            <value>value-list-3</value>
+        </list>
+    </property>
+    
+    <!-- 装配Map类型的map -->
+    <property name="map">
+        <map>
+            <entry key="key1" value="value-key-1"/>
+            <entry key="key2" value="value-key-2"/>
+            <entry key="key3" value="value-key-2"/>
+        </map>
+    </property>
+    
+    <!-- 装配Properties类型的properties -->
+    <property name="properties">
+        <props>
+            <prop key="prop1">value-prop-1</prop>
+            <prop key="prop2">value-prop-2</prop>
+            <prop key="prop3">value-prop-3</prop>
+        </props>
+    </property>
+    
+    <!-- 装配Set类型的set -->
+    <property name="set">
+        <set>
+            <value>value-set-1</value>
+            <value>value-set-2</value>
+            <value>value-set-3</value>
+        </set>
+    </property>
+    
+    <!-- 装配String[]类型的array -->
+    <property name="array">
+        <array>
+            <value>value-array-1</value>
+            <value>value-array-2</value>
+            <value>value-array-3</value>
+        </array>
+    </property>
+</bean>
+     
+     
     
     
 </beans>
